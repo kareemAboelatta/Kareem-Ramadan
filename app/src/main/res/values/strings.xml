@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Kareem Ramadan</string>
+
+    <string name="side_ic">Ramadan Kareem</string>
+    <string name="another">Kareem Ramadan</string>
+
+
+    <string name="your_current_location">Your Current Location</string>
+    <string name="city">City</string>
+    <string name="address">Address</string>
+    <string name="prayer_times">Prayer Timings</string>
+    <string name="fajr">Fajr  </string>
+    <string name="sunrise">Sunrise </string>
+    <string name="dhuhr">Dhuhr  </string>
+    <string name="asr">Asr  </string>
+    <string name="sunset">Sunset </string>
+    <string name="maghrib">Maghrib  </string>
+    <string name="isha">Isha  </string>
+
+
+    <string name="count">Count: </string>
+
+    <string name="UPCOMING_PRAYER">UPCOMING PRAYER</string>
+
+
+
+</resources>

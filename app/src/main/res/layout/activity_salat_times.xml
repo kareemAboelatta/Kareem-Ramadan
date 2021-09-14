@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#D6CACA"
+    tools:context=".forsalatimes.SalatTimesActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="325dp"
+        android:background="@drawable/myshape"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:src="@drawable/goodpicmosque"
+            android:layout_marginBottom="22dp"
+            android:layout_marginHorizontal="5dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:tint="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="wait.."
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fullAdress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="wait ... \n
+            we get you location now, please check Internet connection  "
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:gravity="end"
+            android:paddingHorizontal="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/city" />
+
+        <TextView
+            android:id="@+id/des_upcoming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/UPCOMING_PRAYER"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/fullAdress" />
+
+
+        <TextView
+            android:id="@+id/upcoming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ASR"
+            android:textColor="@color/colorWhite"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/des_upcoming" />
+
+        <TextView
+            android:id="@+id/upcoming_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="05:06 PM"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            app:layout_constraintStart_toEndOf="@+id/upcoming"
+            app:layout_constraintTop_toBottomOf="@+id/des_upcoming" />
+
+
+        <TextView
+            android:id="@+id/upcoming_remins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 hours and 29 minutes \n to go"
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/upcoming" />
+
+
+        <View
+            android:id="@+id/vieww"
+            android:layout_width="3dp"
+            android:layout_height="80dp"
+            android:background="@color/colorWhite"
+            app:layout_constraintStart_toEndOf="@+id/upcoming_remins"
+            app:layout_constraintTop_toBottomOf="@+id/des_upcoming"
+            />
+
+        <TextView
+            android:id="@+id/current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dhuhr"
+            android:textColor="@color/colorWhite"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="15dp"
+            app:layout_constraintStart_toEndOf="@+id/vieww"
+            app:layout_constraintTop_toBottomOf="@+id/des_upcoming" />
+
+
+        <ImageView
+            android:id="@+id/sun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_sun"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/upcoming_remins"
+            app:tint="#FFE927"/>
+
+        <ImageView
+            android:id="@+id/suny"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="60dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_sun"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/upcoming_remins"
+            app:tint="#DDB12A" />
+
+        <TextView
+            android:id="@+id/suny_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sunset"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintTop_toBottomOf="@id/suny"
+            app:layout_constraintStart_toStartOf="@id/suny"
+            />
+
+        <TextView
+            android:id="@+id/sun_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sunrise"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintTop_toBottomOf="@id/sun"
+            app:layout_constraintStart_toStartOf="@id/sun"
+            />
+
+        <TextView
+            android:id="@+id/tv_Sunset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="03:33 pm"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintTop_toBottomOf="@id/suny_text"
+            app:layout_constraintStart_toStartOf="@id/suny"
+            />
+
+        <TextView
+            android:id="@+id/tv_Sunrise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="03:33 pm"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintTop_toBottomOf="@id/sun_text"
+            app:layout_constraintStart_toStartOf="@id/sun"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="295dp"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorWhite"
+            android:layout_margin="20dp"
+            android:paddingBottom="20dp"
+            >
+
+<!--
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/your_current_location"
+                android:textColor="@color/colorPrimary"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"/>
+
+            <View
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/colorPrimary"
+                />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/city"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvCity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="waiting location.."
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/address"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="waiting location.."
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+-->
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/prayer_times"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+
+                android:layout_marginTop="15dp"
+                />
+
+            <View
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/colorPrimary"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/fajr"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/tv_fajr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="04:43"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGray"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/dhuhr"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/tv_Dhuhr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11:52"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGray"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/asr"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/tv_Asr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15:29"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGray"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/maghrib"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/tv_Maghrib"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18:33"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+            <View
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGray"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/isha"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/tv_Isha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="19:44"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
